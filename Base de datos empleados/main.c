@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define Horas_Semanales 40
+#define Horas_Semanales 40//definimos las horas semanales
 #define RECARGO_EXTRA_100 2.0
 
 void solicitarDatos(double *salarioMensual, int *tiempoDescanso, int *horaInicio, int *minutoInicio, int *horaFin, int *minutoFin);
