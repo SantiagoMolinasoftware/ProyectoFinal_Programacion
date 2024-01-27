@@ -81,9 +81,9 @@ void solicitarDatos(Empleado *empleado) {
     scanf("%d:%d", &empleado->horaInicio, &empleado->minutoInicio);
     printf("Ingrese la hora de fin de labores (hh:mm): ");
     scanf("%d:%d", &empleado->horaFin, &empleado->minutoFin);
-    printf("¿Ha trabajado en feriados? (1 para sí, 0 para no): ");
+    printf("Ha trabajado en feriados? (1 para si, 0 para no): ");
     scanf("%d", &empleado->trabajoFeriado);
-    printf("¿Ha trabajado horas extras? (Ingrese el número de horas extras): ");
+    printf("Ha trabajado horas extras? (Ingrese el numero de horas extras): ");
     scanf("%d", &empleado->horasExtras);
 }
 
@@ -182,3 +182,4 @@ void calcularHorasExtras(int horaInicio, int minutoInicio, int horaFin, int minu
         *valorExtra += horasTrabajadas * valorHora * RECARGO_FERIADO;
     }
 }
+
