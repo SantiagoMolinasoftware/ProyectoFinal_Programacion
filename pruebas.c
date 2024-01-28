@@ -49,21 +49,21 @@ int main() {
                 mostrar_sueldo_mensual();
                 break;
             case 3:
-                printf("\n¿Está seguro de limpiar el sistema? (1 para sí, 0 para no): ");
+                printf("\nEsta seguro de limpiar el sistema? (1 para si, 0 para no): ");
                 int confirmacion;
                 scanf("%d", &confirmacion);
                 if (confirmacion == 1) {
                     limpiar_sistema();
                     printf("El sistema ha sido limpiado.\n");
                 } else {
-                    printf("Operación cancelada.\n");
+                    printf("Operacion cancelada.\n");
                 }
                 break;
             case 4:
                 printf("\nSaliendo del programa.\n");
                 break;
             default:
-                printf("\nOpción inválida. Intente de nuevo.\n");
+                printf("\nOpcion invalida. Intente de nuevo.\n");
         }
     } while (opcion != 4);
 
@@ -81,7 +81,7 @@ void solicitar_datos(Empleado *empleado) {
     scanf("%d:%d", &empleado->horaInicioDiurna, &empleado->minutoInicioDiurno);
     printf("Ingrese la hora de fin de labores (hh:mm): ");
     scanf("%d:%d", &empleado->horaFinDiurna, &empleado->minutoFinDiurno);
-    printf("Ha trabajado en feriados? (1 para sí, 0 para no): ");
+    printf("Ha trabajado en feriados? (1 para si, 0 para no): ");
     scanf("%d", &empleado->trabajoFeriadoBooleano);
     printf("Ha trabajado horas extras? (Ingrese el numero de horas extras): ");
     scanf("%d", &empleado->horasExtrasDiurnas);
