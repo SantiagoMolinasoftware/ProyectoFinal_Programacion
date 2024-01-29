@@ -133,8 +133,8 @@ void mostrar_sueldo_mensual() {
     }
 
     // Imprimir los encabezados de la tabla
-    printf("\n%-20s %-20s %-20s\n", "Nombre", "Sueldo Mensual", "Horas Extras");
-    printf("-------------------------------------------------------------\n");
+    printf("\n%-20s %-20s %-20s %-20s\n", "Nombre", "Sueldo Mensual", "Horas Extras", "Aporte al IESS");
+    printf("--------------------------------------------------------------------------------\n");
 
     Empleado empleado; // Variable para almacenar los datos de un empleado
     while (fscanf(archivo, "%s %lf %d %d %d %d %d %d %d\n", empleado.nombreCompleto, &empleado.salarioMensualUSD, &empleado.tiempoDescansoMinutos,
@@ -152,7 +152,7 @@ void mostrar_sueldo_mensual() {
         sueldo_mensual -= calcular_aporte_iess(empleado.salarioMensualUSD); // Restar el aporte al IESS
         
         // Imprimir los datos del empleado en la tabla
-        printf("%-20s %-20.2lf %-20d\n", empleado.nombreCompleto, sueldo_mensual, horas_extras);
+        printf("%-20s %-20.2lf %-20d 9,45%\n", empleado.nombreCompleto, sueldo_mensual, horas_extras);
     }
 
     if (fclose(archivo) == EOF) { // Si el archivo no se pudo cerrar
