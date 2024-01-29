@@ -151,8 +151,6 @@ void mostrar_sueldo_mensual() {
         
         sueldo_mensual -= calcular_aporte_iess(empleado.salarioMensualUSD); // Restar el aporte al IESS
         
-        sueldo_mensual -= 6.17;
-        
         // Imprimir los datos del empleado en la tabla
         printf("%-20s %-20.2lf %-20d\n", empleado.nombreCompleto, sueldo_mensual, horas_extras);
     }
